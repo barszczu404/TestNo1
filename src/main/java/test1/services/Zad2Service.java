@@ -10,20 +10,14 @@ public class Zad2Service {
     public void digitAllDivisorsOfEachTwoDigitNumber() {
         for (int i = 10; i <= 99; i++) {
             int divisorsCnt = 0;
-            System.out.print("Liczba " + i + " ma ");
             for (int j = 1; j <= i; j++) {
                 if (i % j == 0) {
-                    String divisors = j + ", ";
-                    String[] selectingDivisor = divisors.split(", ");
-                    int[] arrayDivisors = new int[selectingDivisor.length];
-                    for (int k = 0; k < arrayDivisors.length; k++) {
-                        arrayDivisors[k] = Integer.parseInt(selectingDivisor[k]);
-                        divisorsCnt++;
-                    }
+                    divisorsCnt++;
                 }
             }
-            System.out.println(divisorsCnt + " dzielników");
+            System.out.println("Liczba " + i + " ma " + divisorsCnt + " dzielników");
         }
     }
-
 }
+
+

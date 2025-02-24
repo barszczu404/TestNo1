@@ -1,5 +1,6 @@
 package test1.services;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -36,10 +37,20 @@ public class Zad4Service {
 
         //liczby pierwsze
         System.out.println("Liczby piewsze z podanych przez Ciebie liczb to: ");
-        for (int number : numbers) {
-            if (!(number % 2 == 0) || number == 2) {
-                System.out.print(number + ", ");
-            }
+        for (int i = 0; i < numbers.length; i++) {
+            boolean isNumberPrime = true;
+                if (numbers[i] <= 1) {
+                    isNumberPrime = false;
+                }
+                for (int j = 2; j <= Math.sqrt(numbers[i]); j++) {
+                        if (numbers[i] % j == 0) {
+                            isNumberPrime = false;
+                            break;
+                        }
+                }
+                if (isNumberPrime) {
+                    System.out.print(numbers[i] + ", ");
+                }
         }
     }
 }

@@ -22,7 +22,7 @@ public class Runner {
 
 
         Zad3Service s3 = new Zad3Service();
-        s3.askUserFor10WordsAndDisplayLongestAndShortestWordWithNumberOfLettersItHasAndNumberOfPalindromes();
+        s3.askUserFor10Words();
 
         System.out.println("-------------------------------------------");
 
